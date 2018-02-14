@@ -1,4 +1,4 @@
-// GOOGLE MAP API DE BASE
+// GOOGLE MAP API AVEC UN MARKER
 
 function initialiserCarte() {
     if (!navigator.geolocation) {
@@ -17,4 +17,9 @@ function initialiserCarte() {
         mapTypeId: google.maps.MapTypeId.ROADTYPE
     };
     var googleMap = new google.maps.Map(document.getElementById("googleMap"), optionsGoogleMap);
+    var markerGG = new google.maps.Marker({
+        position: { lat: 45.483294, lng: -73.868898 },
+        map: googleMap,
+        title: "Collège Gérald-Godin"
+    });
 }
